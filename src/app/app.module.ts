@@ -25,13 +25,19 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { DressesComponent } from './dresses/dresses.component';
 import { CartService } from './cart.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
+HttpClientInMemoryWebApiModule.forRoot(
+  InMemoryDataService, { dataEncapsulation: false }
+),
     ReactiveFormsModule,
     NgbModule,
+    
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
@@ -74,7 +80,7 @@ import { HttpClientModule } from '@angular/common/http';
     DressesComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService]
+  providers: [CartService, InMemoryDataService]
 })
 export class AppModule { }
 
