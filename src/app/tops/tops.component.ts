@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from '../products';
 
+
 @Component({
   selector: 'app-tops',
   templateUrl: './tops.component.html',
