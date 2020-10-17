@@ -10,6 +10,12 @@ import { products } from '../products';
 })
 export class ProductListComponent implements OnInit{
 images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-syd1sn/master/src/assets/pic2.jpg', 'https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-syd1sn/master/src/assets/pic3.jpg', 'https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-syd1sn/master/src/assets/pic4.jpg'];
+
+ images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb1.jpg',
+ 'https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/dress.jpg',
+ 'https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg',
+ 'https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb3.jpg','https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb4.jpg'];
+
 //.map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
  constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
