@@ -27,6 +27,8 @@ import { CartService } from './cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { SearchComponent } from './search/search.component';
+import { ShopService } from './shop.service';
 
 @NgModule({
   imports: [
@@ -77,10 +79,11 @@ HttpClientInMemoryWebApiModule.forRoot(
     TandcComponent,
     ShipComponent,
     ShippingComponent,
-    DressesComponent
+    DressesComponent,
+    SearchComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService, InMemoryDataService]
+  providers: [CartService, InMemoryDataService, ShopService]
 })
 export class AppModule { }
 
