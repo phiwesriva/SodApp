@@ -211,25 +211,25 @@ align-items: center;
 
 }
 
-.container {
+/*.container {
   position: relative;
   max-width: 900px; /*Maximum width */ 
-  margin: 0 auto; /* Center it */
+  /*margin: 0 auto; /* Center it */
   /*display: flex;*/
   /*flex-direction: row;*/ 
-  align-items: center;
+  /*align-items: center;
 
 }
 
 .container .content {
   position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 10px; /* Some padding */
-}
+  /*bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  /*background: rgb(0, 0, 0); /* Fallback color */
+  /*background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  /*color: #f1f1f1; /* Grey text */
+  /*width: 100%; /* Full width */
+  /*padding: 10px; /* Some padding */
+/*}
 
 
 /* Checkout Cart, Shipping Prices */

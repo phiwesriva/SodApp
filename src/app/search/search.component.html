@@ -1,13 +1,11 @@
-<p>
-search works!
-</p><div id="search-component">
-  <h4><label for="search-box">Hero Search</label></h4>
+<div id="search-component">
+  <h4><label for="search-box">Search for clothing</label></h4>
 
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
   <ul class="search-result">
     <li *ngFor="let hero of heroes$ | async" >
-      <a routerLink="/detail/{{hero.id}}">
+      <a routerLink="/header/{{hero.id}}">
         {{hero.name}}
       </a>
     </li>
