@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Hero } from './hero';
+import { Products } from './products';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const heroes = [
+    const products = [
       { id: 11, name: 'Dr Nice' },
       { id: 12, name: 'Narco' },
       { id: 13, name: 'Bombasto' },
@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
-    return {heroes};
+    return {products};
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
@@ -27,7 +27,7 @@ export class InMemoryDataService implements InMemoryDbService {
   // the method below returns the initial number (11).
   // if the heroes array is not empty, the method below returns the highest
   // hero id + 1.
-  genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+  genId(products: Products[]): number {
+    return products.length > 0 ? Math.max(...products.map(hero => products.id)) + 1 : 11;
   }
 }
