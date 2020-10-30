@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { products } from '../products';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Component({
