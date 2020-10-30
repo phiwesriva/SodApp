@@ -7,7 +7,7 @@ import {
  } from 'rxjs/operators';
 
 import { Hero } from '../hero';
-import { ShopService } from '../shop.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-search',
@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private shopService: ShopService) {}
+  constructor(private productService: ProductService) {}
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -34,7 +34,7 @@ export class SearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.heroService.searchHeroes(term)),
+      switchMap((term: string) => this.productService.searchProducs(term)),
     );
   }
 }
