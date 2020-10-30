@@ -35,10 +35,10 @@ export class ProductService {
     const url = `${this.productsUrl}/?id=${id}`;
     return this.http.get<Products[]>(url)
       .pipe(
-        map(heroes => heroes[0]), // returns a {0|1} element array
+        map(products => products[0]), // returns a {0|1} element array
         tap(h => {
           const outcome = h ? `fetched` : `did not find`;
-          this.log(`${outcome} hero id=${id}`);
+          this.log(`${outcome} products id=${id}`);
         }),
         catchError(this.handleError<Products>(`getProducts id=${id}`))
       );
@@ -48,8 +48,8 @@ export class ProductService {
   getProducts(id: number): Observable<Products> {
     const url = `${this.productsUrl}/${id}`;
     return this.http.get<Products>(url).pipe(
-      tap(_ => this.log(`fetched hero id=${id}`)),
-      catchError(this.handleError<Products>(`getHero id=${id}`))
+      tap(_ => this.log(`fetched products id=${id}`)),
+      catchError(this.handleError<Products>(`getProducts id=${id}`))
     );
   }
 
@@ -61,8 +61,8 @@ export class ProductService {
     }
     return this.http.get<Products[]>(`${this.productsUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
-         this.log(`found heroes matching "${term}"`) :
-         this.log(`no heroes matching "${term}"`)),
+         this.log(`found products matching "${term}"`) :
+         this.log(`no products matching "${term}"`)),
       catchError(this.handleError<Products[]>('searchProducts', []))
     );
   }
