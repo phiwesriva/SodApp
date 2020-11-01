@@ -31,25 +31,25 @@ export class ProductService {
   }
 
   /** GET hero by id. Return `undefined` when id not found */
-  getProductseroNo404<Data>(id: number): Observable<Products> {
-    const url = `${this.productsUrl}/?id=${id}`;
+  getProductseroNo404<Data>(price: number): Observable<Products> {
+    const url = `${this.productsUrl}/?price=${price}`;
     return this.http.get<Products[]>(url)
       .pipe(
         map(products => products[0]), // returns a {0|1} element array
         tap(h => {
           const outcome = h ? `fetched` : `did not find`;
-          this.log(`${outcome} products id=${id}`);
+          this.log(`${outcome} products price=${price}`);
         }),
-        catchError(this.handleError<Products>(`getProducts id=${id}`))
+        catchError(this.handleError<Products>(`getProducts price=${price}`))
       );
   }
 
   /** GET hero by id. Will 404 if id not found */
-  getProducts(id: number): Observable<Products> {
-    const url = `${this.productsUrl}/${id}`;
+  getProducts(price: number): Observable<Products> {
+    const url = `${this.productsUrl}/${price}`;
     return this.http.get<Products>(url).pipe(
-      tap(_ => this.log(`fetched products id=${id}`)),
-      catchError(this.handleError<Products>(`getProducts id=${id}`))
+      tap(_ => this.log(`fetched products price=${price}`)),
+      catchError(this.handleError<Products>(`getProducts price=${price}`))
     );
   }
 

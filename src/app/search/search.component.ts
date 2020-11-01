@@ -6,7 +6,7 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Hero } from '../hero';
+import { Products } from '../products';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  heroes$: Observable<Hero[]>;
+  products$: Observable<Products[]>;
   private searchTerms = new Subject<string>();
 
   constructor(private productService: ProductService) {}
@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.heroes$ = this.searchTerms.pipe(
+    this.products$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 

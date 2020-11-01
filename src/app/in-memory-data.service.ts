@@ -8,16 +8,23 @@ import { Products } from './products';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const products = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      //{ id: 11, name: 'Dr Nice' },
+      
+      {
+    name: 'Dress',
+    price: 799,
+    description: 'A large phone with one of the best screens'
+  },
+  {
+    name: 'Top',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Bottom',
+    price: 299,
+    description: 'A great phone with one of the best cameras'
+  },
     ];
     return {products};
   }
@@ -28,6 +35,6 @@ export class InMemoryDataService implements InMemoryDbService {
   // if the heroes array is not empty, the method below returns the highest
   // hero id + 1.
   genId(products: Products[]): number {
-    return products.length > 0 ? Math.max(...products.map(hero => products.id)) + 1 : 11;
+    return products.length > 0 ? Math.max(...products.map(products => products.price)) + 1 : 11;
   }
 }
