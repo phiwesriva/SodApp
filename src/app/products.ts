@@ -1,5 +1,5 @@
-export const products = [
-  {
+export interface products {
+ /* {
     name: 'Dress',
     price: 799,
     description: 'A large phone with one of the best screens'
@@ -13,8 +13,11 @@ export const products = [
     name: 'Bottom',
     price: 299,
     description: 'A great phone with one of the best cameras'
-  },
-];
+  },*/
+  name: string;
+  price: number;
+  description: string;
+}
 
 
 /*

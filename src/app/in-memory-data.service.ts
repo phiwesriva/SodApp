@@ -24,7 +24,7 @@ export class InMemoryDataService implements InMemoryDbService {
     name: 'Bottom',
     price: 299,
     description: 'A great phone with one of the best cameras'
-  },
+  }
     ];
     return {products};
   }
