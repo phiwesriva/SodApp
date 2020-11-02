@@ -22,7 +22,7 @@ export class ProductService {
     private messageService: MessageService) { }
 
   /** GET heroes from the server */
-  getProducts(): Observable<Product[]> {
+  getProduct(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
         tap(_ => this.log('fetched products')),
