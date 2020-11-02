@@ -44,7 +44,7 @@ HttpClientInMemoryWebApiModule.forRoot(
     
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'product/:productId', component: ProductDetailsComponent },
       { path: 'dress/:dressId', component: DressDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'tops', component: TopsComponent },
