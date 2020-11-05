@@ -19,6 +19,9 @@ images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-syd1sn/ma
     config.pauseOnHover = true;
     config.wrap = true;
   }
+ngOnInit(): void {
+throw new Error('Method not implemented.');
+}
   products = products;
 }
 
