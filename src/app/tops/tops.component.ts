@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from '../products';
-
+import { products } from '../products';
 
 @Component({
   selector: 'app-tops',
