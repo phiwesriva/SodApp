@@ -25,20 +25,14 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { DressesComponent } from './dresses/dresses.component';
 import { CartService } from './cart.service';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
-import { SearchComponent } from './search/search.component';
 import { ShopService } from './shop.service';
-import { ProductService } from './product.service';
-import { MessageService } from './message.service';
+
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-HttpClientInMemoryWebApiModule.forRoot(
-  InMemoryDataService, { dataEncapsulation: false }
-),
     ReactiveFormsModule,
     NgbModule,
     
@@ -59,8 +53,7 @@ HttpClientInMemoryWebApiModule.forRoot(
       { path: 'dresses', component: DressesComponent },
       { path: 'about', component: AboutComponent },
       { path: 'shipping', component: ShippingComponent },
-      { path: 'search', component: SearchComponent },
-    ])
+         ])
   ],
   declarations: [
     AppComponent,
@@ -83,10 +76,10 @@ HttpClientInMemoryWebApiModule.forRoot(
     ShipComponent,
     ShippingComponent,
     DressesComponent,
-    SearchComponent
+    
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService, InMemoryDataService, ShopService, ProductService, MessageService]
+  providers: [CartService, ShopService, ]
 })
 export class AppModule { }
 
