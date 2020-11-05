@@ -1,4 +1,4 @@
-export interface Product {
+export interface Products {
  /* {
     name: 'Dress',
     price: 799,

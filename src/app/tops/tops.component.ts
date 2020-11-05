@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product';
+import { Products } from '../products';
 
 
 @Component({
@@ -13,5 +13,5 @@ export class TopsComponent implements OnInit {
 
   ngOnInit() {
   }
-product = product;
+products = products;
 }
