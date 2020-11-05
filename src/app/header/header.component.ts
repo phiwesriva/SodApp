@@ -33,7 +33,7 @@ images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/ma
 //}
 // and don't forget to unsubscribe
 ngOnDestroy() {
-   this.cartService.prodCountCountChange.unsubscribe();
+   
 }
 
 }
