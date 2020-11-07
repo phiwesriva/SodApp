@@ -26,6 +26,11 @@ import { DressesComponent } from './dresses/dresses.component';
 import { CartService } from './cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopService } from './shop.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HeroService } from './hero.service';
+import { MessageService } from './message.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 
 
@@ -33,6 +38,8 @@ import { ShopService } from './shop.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+  InMemoryDataService, { dataEncapsulation: false }),
     ReactiveFormsModule,
     NgbModule,
     
@@ -53,6 +60,7 @@ import { ShopService } from './shop.service';
       { path: 'dresses', component: DressesComponent },
       { path: 'about', component: AboutComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'hero-search', component: HeroSearchComponent },
          ])
   ],
   declarations: [
@@ -76,10 +84,11 @@ import { ShopService } from './shop.service';
     ShipComponent,
     ShippingComponent,
     DressesComponent,
+    HeroSearchComponent,
     
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService, ShopService, ]
+  providers: [CartService, ShopService, InMemoryDataService, HeroService, MessageService, ]
 })
 export class AppModule { }
 
