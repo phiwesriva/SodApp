@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 
@@ -11,13 +12,17 @@ import { FormBuilder } from '@angular/forms';
 export class CartComponent implements OnInit {
 items;
 checkoutForm;
-  constructor(private cartService: CartService,  private http: HttpClient, private formBuilder: FormBuilder) {this.checkoutForm = this.formBuilder.group({
+  constructor(private cartService: CartService, private location: Location,  private http: HttpClient, private formBuilder: FormBuilder) {this.checkoutForm = this.formBuilder.group({
       name: '',
       address: ''
       });
        }
 
   ngOnInit() {this.items = this.cartService.getItems();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 onSubmit(customerData) {
     // Process checkout data here

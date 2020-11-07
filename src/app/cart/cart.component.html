@@ -23,5 +23,7 @@
     </label>
     <input id="address" type="text" formControlName="address">
   </div>
-    <button class="button" type="submit">Purchase</button><a [routerLink]="['/returns']" class="button fancy-button">Back To Shopping</a>
+    <button class="button" type="submit">Purchase</button>
+    <button (click)="goBack()">Go Back</button>
+    
 </form>
