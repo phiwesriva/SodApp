@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,7 @@ images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/ma
     config.keyboard = false;
     config.pauseOnHover = true;
     config.wrap = true;
+    config.showNavigationArrows = false;
   }
 
   ngOnInit() {
@@ -33,7 +35,7 @@ images = ['https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/ma
 //}
 // and don't forget to unsubscribe
 ngOnDestroy() {
-   
+   this.cartService.prodCountCountChange.unsubscribe();
 }
 
 }
