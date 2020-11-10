@@ -31,7 +31,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { SearchComponent } from './search/search.component';
+
 
 
 
@@ -86,7 +86,7 @@ import { SearchComponent } from './search/search.component';
     ShippingComponent,
     DressesComponent,
     HeroSearchComponent,
-    SearchComponent,
+    
     
   ],
   bootstrap: [ AppComponent ],
