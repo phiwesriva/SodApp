@@ -1,4 +1,4 @@
-/*export interface Products {
+ /*export interface Products {
  /* {
     name: 'Dress',
     price: 799,
@@ -30,7 +30,32 @@ export const products = [
     description: 'A large phone with one of the best screens'
   },
   {
-    name: 'Top',
+    name: 'Long dress',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Short dress',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Sleaveless top',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Boop tube dop',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Tip Top ',
+    price: 699,
+    description: 'A great phone with one of the best cameras'
+  },
+  {
+    name: 'Bottom good',
     price: 699,
     description: 'A great phone with one of the best cameras'
   },
